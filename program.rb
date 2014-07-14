@@ -8,9 +8,11 @@ else
      puts "Please enter the input:"
      user_input = STDIN.gets.chomp
      car_obj.store_find_detail(user_input)
+     print "\n"
      print "Do you want to continue? type yes/no: "
      name=gets.chomp
      break if name=="no"
+     print "\n"
    end
 end
 
