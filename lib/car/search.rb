@@ -14,19 +14,19 @@ module Car
     def store_find_detail(arg)
       @arg = arg.chomp
       case
-        when @arg.include?("create_parking_lot")
+        when @arg.match(/create_parking_lot/)
           create_parking_lot
-        when @arg.include?("park")
+        when @arg.match(/park/)
           allocate_slot
-        when @arg.include?("leave")
+        when @arg.match(/leave/)
           cancel_slot
-        when @arg.include?("status")
+        when @arg.match(/status/)
           slot_status
-        when @arg.include?("registration_numbers_for_cars_with_colour")
+        when @arg.match(/registration_numbers_for_cars_with_colour/)
           registration_numbers_for_cars_with_colour
-        when @arg.include?("slot_numbers_for_cars_with_colour")
+        when @arg.match(/slot_numbers_for_cars_with_colour/)
           slot_numbers_for_cars_with_colour
-        when @arg.include?("slot_number_for_registration_number")
+        when @arg.match(/slot_number_for_registration_number/)
           slot_number_for_registration_number
         else
           puts 'Mismatching values...'
